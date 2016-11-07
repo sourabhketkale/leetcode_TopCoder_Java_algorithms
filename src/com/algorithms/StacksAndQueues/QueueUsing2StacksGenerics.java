@@ -1,9 +1,7 @@
 package com.algorithms.StacksAndQueues;
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+
+import java.util.Scanner;
+import java.util.Stack;
 
 public class QueueUsing2StacksGenerics {
     public static class MyQueue<T> {
@@ -30,12 +28,15 @@ public class QueueUsing2StacksGenerics {
         }
 
         public T dequeue() {
-            if(stackOldestOnTop.isEmpty()){
-                return null;
-            } 
-            while(!stackOldestOnTop.isEmpty()){
+           if(stackNewestOnTop.isEmpty() && !stackOldestOnTop.isEmpty()){
+                while(!stackOldestOnTop.isEmpty()){
                  stackNewestOnTop.push(stackOldestOnTop.pop());
-             }
+             } 
+             }else if(!stackNewestOnTop.isEmpty()){
+                return stackNewestOnTop.pop();
+            }else{
+                return null;
+            }
             return stackNewestOnTop.pop();
         }
     }
