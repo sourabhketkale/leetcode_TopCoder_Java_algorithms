@@ -27,6 +27,7 @@ public class QueueUsing2StacksGenerics {
             return stackNewestOnTop.peek();
         }
 
+
         public T dequeue() {
            if(stackNewestOnTop.isEmpty() && !stackOldestOnTop.isEmpty()){
                 while(!stackOldestOnTop.isEmpty()){
@@ -40,6 +41,7 @@ public class QueueUsing2StacksGenerics {
             return stackNewestOnTop.pop();
         }
     }
+
 
     
     public static void main(String[] args) {
