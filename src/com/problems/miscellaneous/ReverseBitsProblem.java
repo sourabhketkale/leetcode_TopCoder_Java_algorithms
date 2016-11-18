@@ -1,5 +1,7 @@
 package com.problems.miscellaneous;
 
+import java.math.BigInteger;
+
 /**
  * Reverse bits of a given 32 bits unsigned integer.
 
@@ -16,9 +18,13 @@ Related problem: Reverse Integer
 public class ReverseBitsProblem {
 	
 	
-	int reverseBits(long input){
+	long reverseBits(long input){
 		
-		if(input ==0){
+		if(input > 2147483647){
+			
+			
+		}
+		if(input==0){
 			return 0;
 		}
 		String binaryString =  Long.toBinaryString(input);
@@ -34,14 +40,14 @@ public class ReverseBitsProblem {
 		StringBuilder reverseBinaryString = new StringBuilder(binaryString).reverse();
 		
 		
-		return Integer.parseInt(reverseBinaryString.toString(), 2);
+		return Long.parseLong(reverseBinaryString.toString(), 10);
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		ReverseBitsProblem bitsProblem = new ReverseBitsProblem();
-		System.out.println(bitsProblem.reverseBits(43261596));
+		ReverseBitsProblem bitsProblem = new ReverseBitsProblem(); 
+		bitsProblem.reverseBits(43261596);
 		
 	}
 
