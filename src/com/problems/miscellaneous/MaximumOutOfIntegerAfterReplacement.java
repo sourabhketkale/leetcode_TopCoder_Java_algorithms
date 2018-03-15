@@ -50,8 +50,8 @@ public class MaximumOutOfIntegerAfterReplacement {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Solution maxobj = new Solution();
-		System.out.println(maxobj.solution(29384697));
+		MaximumOutOfIntegerAfterReplacement maxobj = new MaximumOutOfIntegerAfterReplacement();
+		System.out.println(maxobj.replaceAndFindMaximum(29384697));
 
 	}
 
